@@ -1,0 +1,18 @@
+chirp_mass = Uniform(name='chirp_mass', minimum=1, maximum=2, unit='$M_{\\odot}$')
+mass_ratio =  Uniform(name='mass_ratio', minimum=0.5, maximum=1)
+mass_1 = Constraint(name='mass_1', minimum=.5, maximum=2.5)
+mass_2 = Constraint(name='mass_2', minimum=.5, maximum=2.5)
+chi_1 = bilby.gw.prior.AlignedSpin(name="chi_1", a_prior=Uniform(minimum=0, maximum=0.99), boundary='reflective', latex_label='$\\chi_1$' )
+chi_2 =  bilby.gw.prior.AlignedSpin(name="chi_2", a_prior=Uniform(minimum=0, maximum=0.99), boundary='reflective', latex_label='$\\chi_2$' )
+tilt_1 =  0
+tilt_2 =  0
+phi_12 =  0
+phi_jl =  0
+dec =  Cosine(name='dec')
+ra =  Uniform(name='ra', minimum=0, maximum=2 * np.pi)
+theta_jn =  Sine(name='theta_jn')
+psi =  Uniform(name='psi', minimum=0, maximum=np.pi)
+phase =  Uniform(name='phase', minimum=0, maximum=2 * np.pi)
+luminosity_distance = Uniform(name='luminosity_distance', minimum=10, maximum=500 )
+H_eff5 = Uniform( name='H_eff5', minimum=-3, maximum=3, latex_label = '$H_{eff5}$')
+H_eff8 = Uniform( minimum=-35, maximum= 40, name='H_eff8', latex_label = '$H_{eff5}$')
