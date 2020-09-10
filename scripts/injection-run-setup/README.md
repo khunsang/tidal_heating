@@ -1,4 +1,4 @@
-**** Instrunctions to run PE jobs <h6>
+**** Instrunctions to run PE i<h6> jobs 
 
 
 1> Source bilby (with HTF2 waveform) environment.
