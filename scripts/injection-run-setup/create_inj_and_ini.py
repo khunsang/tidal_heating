@@ -223,6 +223,9 @@ phi_12_array = []
 a_1_array = []
 a_2_array = []
 
+chi1_array = xml_table.get_column('spin1z')
+chi2_array = xml_table.get_column('spin2z')
+
 
 for i in range( len(ra_samples) ):
     param_array = [ float(a) for a  in [ xml_table.get_column('inclination')[i],
@@ -312,7 +315,8 @@ if len (indices_4s) !=0:
                 "psi":xml_table.get_column('polarization')[indices_4s], "phase": xml_table.get_column('coa_phase')[indices_4s],
                 "theta_jn": xml_table.get_column('inclination')[indices_4s], "a_1": np.asarray(a_1_array)[indices_4s], "a_2": np.asarray(a_2_array)[indices_4s],
                 "tilt_1": np.asarray(tilt_1_array)[indices_4s], "tilt_2": np.asarray(tilt_2_array)[indices_4s], "phi_12": np.asarray(phi_12_array)[indices_4s],
-                "phi_jl":np.asarray(phi_jl_array)[indices_4s], "geocent_time": np.zeros_like(a_2_array)[indices_4s]}
+                "phi_jl":np.asarray(phi_jl_array)[indices_4s], "geocent_time": np.zeros_like(a_2_array)[indices_4s],
+				"chi_1":chi1_array[indices_4s], "chi_2":chi2_array[indices_4s] }
 
     bbh_param_dict.update(inj_dict)
     bns_param_dict.update(inj_dict)
@@ -364,7 +368,8 @@ if len (indices_8s) !=0:
                 "psi":xml_table.get_column('polarization')[indices_8s], "phase": xml_table.get_column('coa_phase')[indices_8s],
                 "theta_jn": xml_table.get_column('inclination')[indices_8s], "a_1": np.asarray(a_1_array)[indices_8s], "a_2": np.asarray(a_2_array)[indices_8s],
                 "tilt_1": np.asarray(tilt_1_array)[indices_8s], "tilt_2": np.asarray(tilt_2_array)[indices_8s], "phi_12": np.asarray(phi_12_array)[indices_8s],
-                "phi_jl":np.asarray(phi_jl_array)[indices_8s], "geocent_time": np.zeros_like(a_2_array)[indices_8s]}
+                "phi_jl":np.asarray(phi_jl_array)[indices_8s], "geocent_time": np.zeros_like(a_2_array)[indices_8s],
+				"chi_1":chi1_array[indices_8s], "chi_2":chi2_array[indices_8s] }
 
     bbh_param_dict.update(inj_dict)
     bns_param_dict.update(inj_dict)
@@ -418,7 +423,8 @@ if len (indices_16s) !=0:
                 "psi":xml_table.get_column('polarization')[indices_16s], "phase": xml_table.get_column('coa_phase')[indices_16s],
                 "theta_jn": xml_table.get_column('inclination')[indices_16s], "a_1": np.asarray(a_1_array)[indices_16s], "a_2": np.asarray(a_2_array)[indices_16s],
                 "tilt_1": np.asarray(tilt_1_array)[indices_16s], "tilt_2": np.asarray(tilt_2_array)[indices_16s], "phi_12": np.asarray(phi_12_array)[indices_16s],
-                "phi_jl":np.asarray(phi_jl_array)[indices_16s], "geocent_time": np.zeros_like(a_2_array)[indices_16s]}
+                "phi_jl":np.asarray(phi_jl_array)[indices_16s], "geocent_time": np.zeros_like(a_2_array)[indices_16s],
+				"chi_1":chi1_array[indices_16s], "chi_2":chi2_array[indices_16s] }
 
     bbh_param_dict.update(inj_dict)
     bns_param_dict.update(inj_dict)
@@ -472,7 +478,8 @@ if len (indices_32s) !=0:
                 "psi":xml_table.get_column('polarization')[indices_32s], "phase": xml_table.get_column('coa_phase')[indices_32s],
                 "theta_jn": xml_table.get_column('inclination')[indices_32s], "a_1": np.asarray(a_1_array)[indices_32s], "a_2": np.asarray(a_2_array)[indices_32s],
                 "tilt_1": np.asarray(tilt_1_array)[indices_32s], "tilt_2": np.asarray(tilt_2_array)[indices_32s], "phi_12": np.asarray(phi_12_array)[indices_32s],
-                "phi_jl":np.asarray(phi_jl_array)[indices_32s], "geocent_time": np.zeros_like(a_2_array)[indices_32s]}
+                "phi_jl":np.asarray(phi_jl_array)[indices_32s], "geocent_time": np.zeros_like(a_2_array)[indices_32s],
+				"chi_1":chi1_array[indices_32s], "chi_2":chi2_array[indices_32s] }
 
     bbh_param_dict.update(inj_dict)
     bns_param_dict.update(inj_dict)
@@ -528,7 +535,8 @@ if len (indices_64s) !=0:
                 "psi":xml_table.get_column('polarization')[indices_64s], "phase": xml_table.get_column('coa_phase')[indices_64s],
                 "theta_jn": xml_table.get_column('inclination')[indices_64s], "a_1": np.asarray(a_1_array)[indices_64s], "a_2": np.asarray(a_2_array)[indices_64s],
                 "tilt_1": np.asarray(tilt_1_array)[indices_64s], "tilt_2": np.asarray(tilt_2_array)[indices_64s], "phi_12": np.asarray(phi_12_array)[indices_64s],
-                "phi_jl":np.asarray(phi_jl_array)[indices_64s], "geocent_time": np.zeros_like(a_2_array)[indices_64s]}
+                "phi_jl":np.asarray(phi_jl_array)[indices_64s], "geocent_time": np.zeros_like(a_2_array)[indices_64s],
+				"chi_1":chi1_array[indices_64s], "chi_2":chi2_array[indices_64s] }
 
     bbh_param_dict.update(inj_dict)
     bns_param_dict.update(inj_dict)
@@ -583,7 +591,8 @@ if len (indices_128s) !=0:
                 "psi":xml_table.get_column('polarization')[indices_128s], "phase": xml_table.get_column('coa_phase')[indices_128s],
                 "theta_jn": xml_table.get_column('inclination')[indices_128s], "a_1": np.asarray(a_1_array)[indices_128s], "a_2": np.asarray(a_2_array)[indices_128s],
                 "tilt_1": np.asarray(tilt_1_array)[indices_128s], "tilt_2": np.asarray(tilt_2_array)[indices_128s], "phi_12": np.asarray(phi_12_array)[indices_128s],
-                "phi_jl":np.asarray(phi_jl_array)[indices_128s], "geocent_time": np.zeros_like(a_2_array)[indices_128s]}
+                "phi_jl":np.asarray(phi_jl_array)[indices_128s], "geocent_time": np.zeros_like(a_2_array)[indices_128s],
+				"chi_1":chi1_array[indices_128s], "chi_2":chi2_array[indices_128s] }
 
     bbh_param_dict.update(inj_dict)
     bns_param_dict.update(inj_dict)
