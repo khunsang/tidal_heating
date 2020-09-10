@@ -1,0 +1,30 @@
+min max a_1_array 0.000739626819267869 0.749719500541687
+min max a_2_array 0.0003024718025699258 0.7499039769172668
+starting chirp length calculation
+chirp_time_array len 1125
+[16s] min max chirp_mass_samples 3.1759477 4.227745
+[16s] min max q_samples 0.5545205 0.9998729
+[16s] min max m1_samples 3.690403 4.9996
+[16s] min max m2_samples 2.759829 4.809586
+[16s] min max chi_1 samples -0.7497195 0.7455233
+[16s] min max chi_2 samples -0.749904 0.7368459
+[16s] min max lambda1_samples 0.0 0.0
+[16s] min max lambda2_samples 0.0 0.0
+[64s] min max chirp_mass_samples 2.0956888 3.1714365
+[64s] min max q_samples 0.27848777 0.9982729
+[64s] min max m1_samples 2.524808 4.978555
+[64s] min max m2_samples 1.327051 3.456173
+[64s] min max chi_1 samples -0.7482238 0.7484407
+[64s] min max chi_2 samples -0.7486485 0.7498757
+[64s] min max lambda1_samples 0.0 0.0
+[64s] min max lambda2_samples 0.0 538.63214
+min max lambda1_samples 0.0 1352.2434
+min max lambda2_samples 3.0640795 2498.8315
+[128s] min max chirp_mass_samples 0.9494098 2.095014
+[128s] min max q_samples 0.20332882 0.99992704
+[128s] min max m1_samples 1.125092 4.981026
+[128s] min max m2_samples 1.001757 2.384831
+[128s] min max chi_1 samples -0.7494625 0.7481487
+[128s] min max chi_2 samples -0.74724 0.7445658
+[128s] min max lambda1_samples 0.0 1352.2434
+[128s] min max lambda2_samples 3.0640795 2498.8315
