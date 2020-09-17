@@ -456,12 +456,14 @@ if len (indices_32s) !=0:
 	Heff5_samples, Heff8_samples = get_h_params( m1_samples, m2_samples, xml_table.get_column('spin1z')[indices_32s], 
 					xml_table.get_column('spin2z')[indices_32s], H1, H2 )
 
-	bbh_param_dict = {"H_eff5": Heff5_samples, "H_eff8": Heff8_samples	}
-	
 	lambda1_samples, lambda2_samples = get_lambda1_lambda2_from_mass1_mass2 ( m1_samples, m2_samples, eos_name = options.eos )
+	
+        bbh_param_dict = {"H_eff5": Heff5_samples, "H_eff8": Heff8_samples,
+                            "lambda_1":np.zeros_like( lambda1_samples ), "lambda_2":np.zeros_like( lambda2_samples) }
 
 
-	bns_param_dict = {"lambda_1":lambda1_samples, "lambda_2":lambda2_samples }
+	bns_param_dict = {"lambda_1":lambda1_samples, "lambda_2":lambda2_samples,
+                                "H_eff5": np.zeros_like(Heff5_samples), "H_eff8":np.zeros_like(Heff8_samples)}
 	
 	inj_dict = { "mass_1":m1_samples, "mass_2":m2_samples, "chirp_mass": chirp_mass_samples, "mass_ratio": q_samples,
 				"luminosity_distance": luminosity_distance_samples, "dec": dec_samples[indices_32s], "ra": ra_samples[indices_32s],
@@ -507,13 +509,15 @@ if len (indices_64s) !=0:
 	
 	Heff5_samples, Heff8_samples = get_h_params( m1_samples, m2_samples, xml_table.get_column('spin1z')[indices_64s], 
 					xml_table.get_column('spin2z')[indices_64s], H1, H2 )
-
-	bbh_param_dict = {"H_eff5": Heff5_samples, "H_eff8": Heff8_samples	}
 	
 	lambda1_samples, lambda2_samples = get_lambda1_lambda2_from_mass1_mass2 ( m1_samples, m2_samples, eos_name = options.eos )
+	
+        bbh_param_dict = {"H_eff5": Heff5_samples, "H_eff8": Heff8_samples,
+                    "lambda_1":np.zeros_like( lambda1_samples ), "lambda_2":np.zeros_like( lambda2_samples)}
 
 
-	bns_param_dict = {"lambda_1":lambda1_samples, "lambda_2":lambda2_samples }
+	bns_param_dict = {"lambda_1":lambda1_samples, "lambda_2":lambda2_samples,  
+                    "H_eff5": np.zeros_like(Heff5_samples), "H_eff8":np.zeros_like(Heff8_samples) }
 	
 	inj_dict = { "mass_1":m1_samples, "mass_2":m2_samples, "chirp_mass": chirp_mass_samples, "mass_ratio": q_samples,
 				"luminosity_distance": luminosity_distance_samples, "dec": dec_samples[indices_64s], "ra": ra_samples[indices_64s],
@@ -557,19 +561,17 @@ if len (indices_128s) !=0:
 	
 	Heff5_samples, Heff8_samples = get_h_params( m1_samples, m2_samples, xml_table.get_column('spin1z')[indices_128s], 
 					xml_table.get_column('spin2z')[indices_128s], H1, H2 )
-
-	bbh_param_dict = {"H_eff5": Heff5_samples, "H_eff8": Heff8_samples	}
 	
 	lambda1_samples, lambda2_samples = get_lambda1_lambda2_from_mass1_mass2 ( m1_samples, m2_samples, eos_name = options.eos )
-
-
 
 	print ("min max lambda1_samples", min(lambda1_samples), max(lambda1_samples))
 	print ("min max lambda2_samples", min(lambda2_samples), max(lambda2_samples))
 
+	bbh_param_dict = {"H_eff5": Heff5_samples, "H_eff8": Heff8_samples,
+                "lambda_1":np.zeros_like( lambda1_samples ), "lambda_2":np.zeros_like( lambda2_samples)}
 
-
-	bns_param_dict = {"lambda_1":lambda1_samples, "lambda_2":lambda2_samples }
+	bns_param_dict = {"lambda_1":lambda1_samples, "lambda_2":lambda2_samples, 
+                "H_eff5": np.zeros_like(Heff5_samples), "H_eff8":np.zeros_like(Heff8_samples) }
 	
 	inj_dict = { "mass_1":m1_samples, "mass_2":m2_samples, "chirp_mass": chirp_mass_samples, "mass_ratio": q_samples,
 				"luminosity_distance": luminosity_distance_samples, "dec": dec_samples[indices_128s], "ra": ra_samples[indices_128s],
