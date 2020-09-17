@@ -1,3 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# File              : create_inj_and_ini.py
+# Author            : Khun Sang Phukon <khunsang@gmail.com>
+# Date              : 17.09.2020
+# Last Modified Date: 17.09.2020
+# Last Modified By  : Khun Sang Phukon <khunsang@gmail.com>
 from optparse import OptionParser
 #from ligo.lw import ligolw
 #from ligo.lw import lsctables
@@ -273,7 +280,7 @@ for i, tau0 in enumerate(chirp_time_array):
 	if tau0 > 8 and tau0 <= 16:
 		indices_16s.append(i)
 	if tau0 > 16 and tau0 <= 32:
-		indices_16s.append(i)
+		indices_32s.append(i)
 	if tau0 > 32 and tau0 <= 64:
 		indices_64s.append(i)
 	if tau0 >64:
