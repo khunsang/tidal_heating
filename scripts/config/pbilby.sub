@@ -1,2 +1,12 @@
 universe = vanilla
-executable = /cvmfs/
+executable = /soft/condor_mpi/bin/mpirun
+getenv = true
+request_CPUs = 10
+environment = "OMP_NUM_THREAD=1"
+accounting_group_user = khun.phukon
+accounting_group = 
+log = 
+error = 
+output = 
+argument = "parallel_bilby_analysis outdir/data/GWXXXXXX_data_dump.pickle --label GWXXXXXX4_0 --outdir /home/khun.phukon/WORK_DIR/testPbilby/outdir/result --sampling-seed 1234"
+queue 1
